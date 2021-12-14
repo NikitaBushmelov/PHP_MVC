@@ -2,14 +2,12 @@
 
     class ticket{
 
-        private $codi;
         private $codi_reserva;
         private $total;
         private $data_ticket;
 
-        public function __construct($codi,$codi_reserva,$total,$data_ticket)
+        public function __construct($codi_reserva,$total,$data_ticket)
         {
-                $this->codi=$codi;
                 $this->codi_reserva=$codi_reserva;
                 $this->total=$total;
                 $this->data_tickket=$data_ticket;

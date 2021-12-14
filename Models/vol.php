@@ -1,23 +1,27 @@
 <?php
 
+        require_once("../Config/database.php");
     class vol
     {
 
-        private $codi;
         private $origen;
         private $desti;
         private $preu;
         private $foto;
         private $nombre_places;
 
-        public function __construct($codi,$origen,$desti,$preu,$foto,$nombre_places)
+        public function __construct($origen,$desti,$preu,$foto,$nombre_places)
         {
-            $this->codi=$codi;
             $this->origen=$origen;
             $this->desti=$desti;
             $this->preu=$preu;
             $this->foto=$foto;
             $this->nombre_places=$nombre_places;
+        }
+
+        public function insertar()
+        {
+                # code...
         }
 
         /**

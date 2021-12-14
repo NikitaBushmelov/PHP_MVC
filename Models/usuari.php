@@ -3,7 +3,6 @@
     class usuari
     {
 
-        private $codi;
         private $nom;
         private $contrasenya;
         private $correu;
@@ -13,9 +12,8 @@
         private $num_tarjeta;
         private $rol;
 
-        public function __construct($codi,$nom,$contrasenya,$correu,$adreça,$dni,$telefon,$num_tarjeta,$rol)
+        public function __construct($nom,$contrasenya,$correu,$adreça,$dni,$telefon,$num_tarjeta,$rol)
         {
-            $this->codi=$codi;
             $this->nom=$nom;
             $this->contrasenya=$contrasenya;
             $this->correu=$correu;
