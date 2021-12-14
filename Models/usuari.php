@@ -1,8 +1,10 @@
 <?php
 
+        require_once("config/database.php");
     class usuari
     {
 
+        private $codi;
         private $nom;
         private $contrasenya;
         private $correu;
@@ -12,7 +14,7 @@
         private $num_tarjeta;
         private $rol;
 
-        public function __construct($nom,$contrasenya,$correu,$adreça,$dni,$telefon,$num_tarjeta,$rol)
+        public function __construct($nom,$contrasenya,$correu,$adreça,$dni,$telefon,$num_tarjeta)
         {
             $this->nom=$nom;
             $this->contrasenya=$contrasenya;
@@ -21,7 +23,15 @@
             $this->dni=$dni;
             $this->telefon=$telefon;
             $this->num_tarjeta=$num_tarjeta;
-            $this->rol=$rol;
+        }
+
+        public function insertar(){
+    
+                $conexion = new database();
+                $sql = "INSERT INTO vol (origen,desti,preu,foto,nombre_places) VALUES ('$this->origen','$this->desti','$this->preu','$this->foto','$this->nombre_places')";
+                $a = $conexion->connect();
+                $a->query($sql);
+                $a->close();
         }
 
         /**

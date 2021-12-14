@@ -1,7 +1,9 @@
 <?php
 
+        require_once("config/database.php");
     class ticket{
 
+        private $codi;
         private $codi_reserva;
         private $total;
         private $data_ticket;

@@ -1,8 +1,10 @@
 <?php
 
+        require_once("config/database.php");
     class reserva
     {
 
+        private $codi;
         private $codi_vol;
         private $codi_usuari;
         private $data_anada;
