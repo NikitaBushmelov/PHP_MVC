@@ -28,10 +28,36 @@
         public function insertar(){
     
                 $conexion = new database();
-                $sql = "INSERT INTO vol (origen,desti,preu,foto,nombre_places) VALUES ('$this->origen','$this->desti','$this->preu','$this->foto','$this->nombre_places')";
+                $sql = "INSERT INTO usuari (nom,contrasenya,correu,adreça,dni,telefon,num_tarjeta) VALUES ('$this->nom','$this->contrasenya','$this->correu','$this->adreça','$this->dni','$this->telefon','$this->num_tarjeta')";
                 $a = $conexion->connect();
                 $a->query($sql);
                 $a->close();
+        }
+
+        public function modificar(){
+                $conexion = new database();
+                $sql = "UPDATE usuari SET correu = '$this->correu', telefon = '$this->telefon' WHERE codi = '$this->codi'";
+                $a = $conexion->connect();
+                $a->query($sql);
+                $a->close();
+        }
+
+        public function buscar(){
+                $conexion = new database();
+                $sql = "SELECT * FROM usuari WHERE codi = '$this->codi'";
+                $a = $conexion->connect();
+                $resultado = $a->query($sql);
+                $a->close();
+                return $resultado;
+        }
+
+        public function listar(){
+                $conexion = new database();
+                $sql = "SELECT * FROM usuari";
+                $a = $conexion->connect();
+                $resultado = $a->query($sql);
+                $a->close();
+                return $resultado;
         }
 
         /**

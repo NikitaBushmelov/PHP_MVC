@@ -15,6 +15,49 @@
                 $this->data_tickket=$data_ticket;
         }
 
+        public function insertar(){
+    
+                $conexion = new database();
+                $sql = "INSERT INTO ticket (codi_reserva,total,data_ticket) VALUES ('$this->codi_reserva','$this->total','$this->data_ticket')";
+                $a = $conexion->connect();
+                $a->query($sql);
+                $a->close();
+        }
+
+        public function eliminar(){
+                $conexion = new database();
+                $sql = "DELETE FROM ticket WHERE codi = '$this->codi'";
+                $a = $conexion->connect();
+                $a->query($sql);
+                $a->close();
+        }
+
+        public function modificar(){
+                $conexion = new database();
+                $sql = "UPDATE ticket SET data_ticket = '$this->data_ticket', total = '$this->total' WHERE codi = '$this->codi'";
+                $a = $conexion->connect();
+                $a->query($sql);
+                $a->close();
+        }
+
+        public function buscar(){
+                $conexion = new database();
+                $sql = "SELECT * FROM ticket WHERE codi = '$this->codi'";
+                $a = $conexion->connect();
+                $resultado = $a->query($sql);
+                $a->close();
+                return $resultado;
+        }
+
+        public function listar(){
+                $conexion = new database();
+                $sql = "SELECT * FROM ticket";
+                $a = $conexion->connect();
+                $resultado = $a->query($sql);
+                $a->close();
+                return $resultado;
+        }
+
         /**
          * Get the value of codi
          */ 
