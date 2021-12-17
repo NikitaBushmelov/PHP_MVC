@@ -1,25 +1,15 @@
 <?php
 
-        require_once("config/database.php");
+        require_once("Config/database.php");
     class reserva
     {
 
-        private $codi;
-        private $codi_vol;
-        private $codi_usuari;
-        private $data_anada;
-        private $data_tornada;
-        private $nombre_places;
-
-        public function __construct($codi_vol,$codi_usuari,$data_anada,$data_tornada,$nombre_places)
-        {
-            $this->codi_vol=$codi_vol;
-            $this->codi_usuari=$codi_usuari;
-            $this->data_anada=$data_anada;
-            $this->data_tornada=$data_tornada;
-            $this->nombre_places=$nombre_places;
-
-        }
+        public $codi;
+        public $codi_vol;
+        public $codi_usuari;
+        public $data_anada;
+        public $data_tornada;
+        public $nombre_places;
 
         public function insertar(){
     
