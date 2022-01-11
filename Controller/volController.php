@@ -26,9 +26,10 @@
         public function eliminarvols()
         {
             $vol = new vol();
-            $vol->codi=$_GET['codi'];
+            $vol->codi=$_REQUEST['codi'];
             $vol->eliminar();
             header("Location: index.php?controller=vol&action=mostrarvols");
+            
         }
         public function modificarvols()
         {

@@ -29,7 +29,10 @@
       <a class="nav-link" href="index.php?controller=vol&action=insertarvols">Insertar vols</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="index.php?controller=usuari&action=mostrarusuari">Mostrar Usuari</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=usuari&action=insertarusuari">Insertar Usuari</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>

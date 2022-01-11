@@ -19,8 +19,8 @@ while($row = $vols->fetch_assoc()){
     echo "<td>".$row['preu']."</td>";
     echo "<td>".$row['foto']."</td>";
     echo "<td>".$row['nombre_places']."</td>";
-    echo "<td><a href='index.php?page=vol&action=modificar&codi=".$row['codi']."'>Modificar</a></td>";
-    echo "<td><a href='index.php?page=vol&action=eliminar&codi=".$row['codi']."'>Eliminar</a></td>";
+    echo "<td><a href='index.php?controller=vol&action=modificarvols&codi=".$row['codi']."'>Modificar</a></td>";
+    echo "<td><a href='index.php?controller=vol&action=eliminarvols&codi=".$row['codi']."'>Eliminar</a></td>";
     echo "</tr>";
 }
 echo "</table>";
