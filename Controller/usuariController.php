@@ -1,7 +1,7 @@
 <?php
     require_once("Models/usuari.php");
     class usuariController{
-        public function mostrarVols()
+        public function mostrarusuari()
         {
             $usuari = new usuari();
             $usuaris = $usuari->listar();
@@ -17,9 +17,9 @@
             $usuari->correu = $_POST['correu'];
             $usuari->adreça = $_POST['adreça'];
             $usuari->dni = $_POST['dni'];
-            $usuari->dni = $_POST['telefon'];
-            $usuari->dni = $_POST['num_tarjeta'];
-            $usuari->dni = $_POST['rol'];
+            $usuari->telefon = $_POST['telefon'];
+            $usuari->num_tarjeta = $_POST['num_tarjeta'];
+            $usuari->rol = $_POST['rol'];
             $usuari->insertar();
             header("Location: index.php?controller=usuari&action=mostrarusuari");
         }
@@ -37,6 +37,11 @@
         public function modificarusuari()
         {
             require_once 'Views/usuari/modificarusuari.php';
+        }
+
+        public function actualitzarusuari()
+        {
+            
         }
     
     }

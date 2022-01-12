@@ -49,6 +49,14 @@
                 return $resultado;
         }
 
+        public function eliminar(){
+                $conexion = new database();
+                $sql = "DELETE FROM usuari WHERE codi = '$this->codi'";
+                $a = $conexion->connect();
+                $a->query($sql);
+                $a->close();
+        }
+
         /**
          * Get the value of codi
          */ 

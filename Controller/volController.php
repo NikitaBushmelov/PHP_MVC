@@ -33,7 +33,23 @@
         }
         public function modificarvols()
         {
+            $vol = new vol();
+            $vol->codi=$_REQUEST['codi'];
+            $resultado=$vol->buscar();
+            $row=$resultado->fetch_assoc();
             require_once 'Views/vol/modificarvols.php';
+        }
+
+        public function actualitzarvols(){
+          $vol = new vol();
+          $vol->codi = $_POST['codi'];
+          $vol->origen = $_POST['origen'];
+          $vol->desti = $_POST['desti'];
+          $vol->preu = $_POST['preu'];
+          $vol->foto = $_POST['foto'];
+          $vol->nombre_places = $_POST['nombre_places'];
+          $vol->modificar();
+          header("Location: index.php?controller=vol&action=mostrarvols");
         }
     
     }
