@@ -36,12 +36,27 @@
         }
         public function modificarusuari()
         {
+            $usuari = new usuari();
+            $usuari->codi=$_REQUEST['codi'];
+            $resultado=$usuari->buscar();
+            $row=$resultado->fetch_assoc();
             require_once 'Views/usuari/modificarusuari.php';
         }
 
         public function actualitzarusuari()
         {
-            
+            $usuari = new usuari();
+            $usuari->codi = $_POST['codi'];
+            $usuari->nom = $_POST['nom'];
+            $usuari->contrasenya = $_POST['contrasenya'];
+            $usuari->correu = $_POST['correu'];
+            $usuari->adreça = $_POST['adreça'];
+            $usuari->dni = $_POST['dni'];
+            $usuari->telefon = $_POST['telefon'];
+            $usuari->num_tarjeta = $_POST['num_tarjeta'];
+            $usuari->rol = $_POST['rol'];
+            $usuari->modificar();
+            header("Location: index.php?controller=usuari&action=mostrarusuari");
         }
     
     }

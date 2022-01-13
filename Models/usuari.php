@@ -25,7 +25,7 @@
 
         public function modificar(){
                 $conexion = new database();
-                $sql = "UPDATE usuari SET correu = '$this->correu', telefon = '$this->telefon' WHERE codi = '$this->codi'";
+                $sql = "UPDATE usuari SET nom = '$this->nom',correu = '$this->correu', telefon = '$this->telefon' WHERE codi = '$this->codi'";
                 $a = $conexion->connect();
                 $a->query($sql);
                 $a->close();

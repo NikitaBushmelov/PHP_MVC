@@ -1,4 +1,4 @@
-<form action="index.php?controller=vol&action=actualitzarusuari" method="post">
+<form action="index.php?controller=usuari&action=actualitzarusuari" method="post">
 
     <div class="form-group">
         <input type="hidden" class="form-control" id="codi" name="codi" value=<?php echo $row['codi'];?>>
@@ -20,8 +20,7 @@
         <input type="text" class="form-control" id="adreça" name="adreça" value=<?php echo $row['adreça'];?>>
     </div>
     <div class="form-group">
-        <label for="nombre_places">DNI</label>
-        <input type="text" class="form-control" id="dni" name="dni" value=<?php echo $row['dni'];?>>
+        <input type="hidden" class="form-control" id="dni" name="dni" value=<?php echo $row['dni'];?>>
     </div>
     <div class="form-group">
         <label for="origen">Telefon</label>
@@ -30,6 +29,9 @@
     <div class="form-group">
         <label for="origen">Num tarjeta</label>
         <input type="text" class="form-control" id="num_tarjeta" name="num_tarjeta" value=<?php echo $row['num_tarjeta'];?>>
+    </div>
+    <div class="form-group">
+        <input type="hidden" class="form-control" id="rol" name="rol" value=<?php echo $row['rol'];?>>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 
