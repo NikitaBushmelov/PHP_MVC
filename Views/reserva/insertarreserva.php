@@ -1,7 +1,7 @@
 <form action="index.php?controller=reserva&action=guardarreserva" method="post">
 
     <div class="form-group">
-        <input type="hidden" class="form-control" id="codi_vol" name="codi_vols" value=<?php echo $_REQUEST['codi'];?>>
+        <input type="hidden" class="form-control" id="codi_vol" name="codi_vol" value=<?php echo $_REQUEST['codi'];?>>
     </div>
     <div class="form-group">
         <label for="codi_usuari">codi usuari</label>
