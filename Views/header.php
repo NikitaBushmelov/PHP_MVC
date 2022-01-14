@@ -35,6 +35,9 @@
         <a class="nav-link" href="index.php?controller=usuari&action=insertarusuari">Insertar Usuari</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=reserva&action=mostrarreserva">Mostrar Reserva</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
