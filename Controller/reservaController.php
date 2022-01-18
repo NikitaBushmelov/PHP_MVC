@@ -43,10 +43,8 @@
         public function actualitzarreserva(){
           $reserva = new reserva();
           $reserva->codi = $_POST['codi'];
-          $reserva->origen = $_POST['origen'];
-          $reserva->desti = $_POST['desti'];
-          $reserva->preu = $_POST['preu'];
-          $reserva->foto = $_POST['foto'];
+          $reserva->data_anada = $_POST['data_anada'];
+          $reserva->data_tornada = $_POST['data_tornada'];
           $reserva->nombre_places = $_POST['nombre_places'];
           $reserva->modificar();
           header("Location: index.php?controller=reserva&action=mostrarreserva");
