@@ -17,7 +17,8 @@
         public function insertar(){
     
                 $conexion = new database();
-                $sql = "INSERT INTO usuari (nom,contrasenya,correu,adreça,dni,telefon,num_tarjeta) VALUES ('$this->nom','$this->contrasenya','$this->correu','$this->adreça','$this->dni','$this->telefon','$this->num_tarjeta')";
+                $pwd=md5($this->contrasenya);
+                $sql = "INSERT INTO usuari (nom,contrasenya,correu,adreça,dni,telefon,num_tarjeta) VALUES ('$this->nom','$pwd','$this->correu','$this->adreça','$this->dni','$this->telefon','$this->num_tarjeta')";
                 $a = $conexion->connect();
                 $a->query($sql);
                 $a->close();

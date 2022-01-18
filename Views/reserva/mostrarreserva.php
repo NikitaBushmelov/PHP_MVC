@@ -6,6 +6,8 @@
     <th>Data_anada</th>
     <th>Data_tornada</th>
     <th>nombre_places</th>
+    <th>Modificar_reserva</th>
+    <th>Eliminar_reserva</th>    
     
     </tr>
 <?php

@@ -38,6 +38,12 @@
         <a class="nav-link" href="index.php?controller=reserva&action=mostrarreserva">Mostrar Reserva</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=ticket&action=insertarticket">Insertar Ticket</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.php?controller=ticket&action=mostrarticket">Mostrar Ticket</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
