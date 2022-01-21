@@ -1,20 +1,25 @@
 <table style="border: 1;">
     <tr>
-    <th>Nom</th>
-    <th>Correu</th>
-    <th>Telefon</th>
-    <th>modificar</th>
-    <th>eliminar</th>
-    
+    <th>Origen</th>
+    <th>Desti</th>
+    <th>Data_anada</th>
+    <th>Data_tornada</th>
+    <th>Num_de_places</th>
+    <th>Preu_vol</th>
+    <th>Preu_total</th>
+    <th>Data_ticket</th>
     </tr>
 <?php
-while($row = $usuaris->fetch_assoc()){
+while($row = $tickets->fetch_assoc()){
     echo "<tr>";
-    echo "<td>".$row['nom']."</td>";
-    echo "<td>".$row['correu']."</td>";
-    echo "<td>".$row['telefon']."</td>";
-    echo "<td><a href='index.php?controller=usuari&action=modificarusuari&codi=".$row['codi']."'>Modificar</a></td>";
-    echo "<td><a href='index.php?controller=usuari&action=eliminarusuari&codi=".$row['codi']."'>Eliminar</a></td>";
+    echo "<td>".$row['origen']."</td>";
+    echo "<td>".$row['desti']."</td>";
+    echo "<td>".$row['data_anada']."</td>";
+    echo "<td>".$row['data_tornada']."</td>";
+    echo "<td>".$row['num_places']."</td>";
+    echo "<td>".$row['preu']."</td>";
+    echo "<td>".$row['total']."</td>";
+    echo "<td>".$row['data_ticket']."</td>";
     echo "</tr>";
 }
 echo "</table>";

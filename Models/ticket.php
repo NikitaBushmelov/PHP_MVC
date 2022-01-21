@@ -12,8 +12,12 @@
         public function insertar(){
     
                 $conexion = new database();
-                $sql = "INSERT INTO ticket (codi_reserva,total,data_ticket) VALUES ('$this->codi_reserva','$this->total','$this->data_ticket')";
                 $a = $conexion->connect();
+                $sqltotal="SELECT (r.nombre_places * v. preu) as total FROM reserva as r INNER JOIN vol as v on r.codi_vol = v.codi WHERE r.codi = '$this->codi_reserva'";
+                $resultado = $a->query($sqltotal);
+                $row=$resultado->fetch_assoc();
+                $preut=$row['total'];
+                $sql = "INSERT INTO ticket (codi_reserva,total) VALUES ('$this->codi_reserva','$preut')";
                 $a->query($sql);
                 $a->close();
         }

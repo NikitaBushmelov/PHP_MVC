@@ -7,12 +7,9 @@
             $tickets = $ticket->listar();
             require_once 'Views/ticket/mostrarticket.php';
         }
-        public function insertarticket(){
-            require_once 'Views/ticket/insertarticket.php';
-        }
-        public function guardarticket(){
+        public function pagarticket(){
             $ticket = new ticket();
-            $ticket->nom = $_POST['nom'];
+            $ticket->codi = $_POST['nom'];
             $ticket->contrasenya = $_POST['contrasenya'];
             $ticket->correu = $_POST['correu'];
             $ticket->adreça = $_POST['adreça'];
@@ -26,18 +23,5 @@
         public function index(){
             require_once 'index.php';
         }
-        public function eliminarticket()
-        {
-            $ticket = new ticket();
-            $ticket->codi=$_REQUEST['codi'];
-            $ticket->eliminar();
-            header("Location: index.php?controller=ticket&action=mostrarticket");
-            
-        }
-        public function modificarticket()
-        {
-            require_once 'Views/ticket/modificarticket.php';
-        }
-    
     }
 ?>

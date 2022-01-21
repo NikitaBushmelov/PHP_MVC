@@ -8,7 +8,8 @@
     <th>nombre_places</th>
     <th>Modificar_reserva</th>
     <th>Eliminar_reserva</th>    
-    
+    <th>Pagar_ticket</th>
+
     </tr>
 <?php
 while($row = $reservas->fetch_assoc()){
@@ -20,6 +21,7 @@ while($row = $reservas->fetch_assoc()){
     echo "<td>".$row['nombre_places']."</td>";
     echo "<td><a href='index.php?controller=usuari&action=modificarusuari&codi=".$row['codi']."'>Modificar</a></td>";
     echo "<td><a href='index.php?controller=usuari&action=eliminarusuari&codi=".$row['codi']."'>Eliminar</a></td>";
+    echo "<td><a href='index.php?controller=ticket&action=pagarticket&codi=".$row['codi']."'>Pagar</a></td>";
     echo "</tr>";
 }
 echo "</table>";
